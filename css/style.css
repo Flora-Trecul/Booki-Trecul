@@ -1,6 +1,7 @@
 /****** General ***********/
 * {
     font-family: 'Raleway', sans-serif;
+    font-size: 16px;
 }
 
 :root {
@@ -13,9 +14,12 @@
     color: var(--main-color);
 }
 
+/* Manque un gap 35px qui ne fonctionne pas*/
 body {
     display: flex;
     justify-content: center;
+    margin: 0;
+    padding: 0 50px;
 }
 
 .main-container {
@@ -57,6 +61,66 @@ a {
 .neutral-star {
     color: var(--main-bg-color)
 }
+
+/****** Header & footer *****/
+
+
+nav {
+    height: 79px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+#logo {
+    height : 19px;
+    margin: 30px 50px;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 68px;
+    padding: 0 50px;
+}
+
+.menu li {
+    padding-top: 16px;
+}
+
+.menu li:hover {
+    border-top: 2px solid var(--main-color);
+    color: var(--main-color);
+    padding-top: 14px;
+}
+
+footer {
+    background-color: var(--main-bg-color);
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.footer-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-list li {
+    margin-top: 15px;
+}
+
+footer article {
+    padding: 20px;
+    width: 33%;
+}
+
 
 /****** Hebergements And Populaires ***********/
 .hebergements-and-populaires {
