@@ -31,8 +31,10 @@
                 <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
                 <p>En plein centre-ville ou en pleine nature</p>
                 <form action="" method="get">
-                    <i class="fa-solid fa-location-dot"></i>
-                    <input type="text" name="place" value="Marseille, France">
+                    <div class="icon-container">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <input type="text" name="place" id="search-place" value="Marseille, France">
                     <input type="submit" value="Rechercher">
                 </form>
                 <div class="filters">
@@ -50,7 +52,12 @@
                         <i class="fa-solid fa-fire" aria-hidden="true"></i> <strong>Nos pépites</strong>
                     </button>
                 </div>
-                <p><i class="fa-solid fa-info" aria-hidden="true"></i> Plus de 500 logements sont disponibles dans cette ville</p>
+                <div id="info-bar">
+                    <div class="icon-container">
+                        <i class="fa-solid fa-info" aria-hidden="true"></i>
+                    </div>
+                    <p>Plus de 500 logements sont disponibles dans cette ville</p>
+                </p>
             </section>
 
             <div class="hebergements-and-populaires">
@@ -167,7 +174,7 @@
                             </a>
                         </div>
 
-                        <p><strong>Afficher plus</strong></p>
+                        <p><a href="#"><strong>Afficher plus</strong></a></p>
                     </div>
                 </section>
                 
@@ -279,23 +286,23 @@
             <article>
                 <h2 class="footer-title">À propos</h2>
                 <ul class="footer-list">
-                    <li>Fonctionnement du site</li>
-                    <li>Conditions générales</li>
-                    <li>Données et confidentialité</li>
+                    <a href="#"><li>Fonctionnement du site</li></a>
+                    <a href="#"><li>Conditions générales</li></a>
+                    <a href="#"><li>Données et confidentialité</li></a>
                 </ul>
             </article>
             <article>
                 <h2 class="footer-title">Nos hébergements</h2>
                 <ul class="footer-list">
-                    <li>Charte qualité</li>
-                    <li>Proposer votre hôtel</li>
+                    <a href="#"><li>Charte qualité</li></a>
+                    <a href="#"><li>Proposer votre hôtel</li></a>
                 </ul>
             </article>
             <article>
                 <h2 class="footer-title">Assistance</h2>
                 <ul class="footer-list">
-                    <li>Centre d'aide</li>
-                    <li>Nous contacter</li>
+                    <a href="#"><li>Centre d'aide</li></a>
+                    <a href="#"><li>Nous contacter</li></a>
                 </ul>
             </article>
         </footer>

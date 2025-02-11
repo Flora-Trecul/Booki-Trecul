@@ -14,7 +14,6 @@
     color: var(--main-color);
 }
 
-/* Manque un gap 35px qui ne fonctionne pas*/
 body {
     display: flex;
     justify-content: center;
@@ -29,6 +28,11 @@ body {
     box-sizing: border-box;
 }
 
+h2 {
+    font-size: 18px;
+    font-weight: 700;
+}
+
 a {
     color: inherit;
     text-decoration: none;
@@ -37,6 +41,8 @@ a {
 .section-title {
     margin: 0;
     font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 30px;
 }
 
 .card {
@@ -50,10 +56,6 @@ a {
     object-fit: cover;
 }
 
-.card-title {
-    font-size: 16px;
-}
-
 .euro {
     font-weight: 700;
 }
@@ -62,8 +64,13 @@ a {
     color: var(--main-bg-color)
 }
 
+
+
 /****** Header & footer *****/
 
+header {
+    margin-bottom: 30px;
+}
 
 nav {
     height: 79px;
@@ -74,7 +81,7 @@ nav {
 
 #logo {
     height : 19px;
-    margin: 30px 50px;
+    margin: 30px 50px 30px 0;
 }
 
 .menu {
@@ -98,11 +105,10 @@ footer {
     background-color: var(--main-bg-color);
     display: flex;
     justify-content: space-between;
+    margin-top: 35px;
 }
 
 .footer-title {
-    font-size: 18px;
-    font-weight: 700;
     margin: 0;
 }
 
@@ -122,10 +128,110 @@ footer article {
 }
 
 
+/****** Intro ******/
+
+h1 {
+    margin: 0 0 8px 0;
+    font-size: 22px;
+}
+
+#intro p {
+    margin: 0;
+}
+
+form {
+    margin: 35px 0;
+    display: flex;
+    border: 1px solid var(--main-bg-color);
+    border-radius: 15px;
+    height: 49px;
+    width: fit-content;
+}
+
+.icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form .icon-container {
+    background-color: var(--main-bg-color);
+    border-radius: 15px 0 0 15px;
+    width: 50px;
+}
+
+.fa-location-dot {
+    color: black;
+    font-size: 18px;
+}
+
+input {
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    border: none;
+}
+
+#search-place {
+    width: 196px;
+}
+
+input[type="submit"] {
+    color: white;
+    background-color: var(--main-color);
+    border-radius: 0 15px 15px 0;
+    padding: 15px 16px;
+}
+
+.filters {
+    display: flex;
+    gap: 15px;
+}
+
+button {
+    background-color: white;
+    border: 2px solid #D9D9D9;
+    border-radius: 25px;
+    padding: 4px 19px;
+}
+
+button:hover {
+    background-color: var(--filter-bg-color);
+}
+
+/* utiliser du flex pour centrer et ajouter un gap 10px */
+button strong {
+    font-size: 17px;
+}
+
+button .fa-solid {
+    font-size: 17px;
+}
+
+#info-bar {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-top: 35px;
+}
+
+#info-bar .icon-container {
+    width: 24px;
+    height: 24px;
+    border: 1px solid #D9D9D9;
+    border-radius: 50%;
+}
+
+.fa-info {
+    font-size: 10px;
+}
+
+
 /****** Hebergements And Populaires ***********/
 .hebergements-and-populaires {
     display: flex;
     justify-content: space-between;
+    margin: 35px 0;
 }
 
 .hebergements-and-populaires section {
@@ -187,6 +293,38 @@ footer article {
 
 
 
+/************* Activities *************/
+
+#activities {
+    padding: 30px;
+}
+
+.activities-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+/* léger gap entre l'image et le titre, à enlever */
+.activities-cards .card {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    height: 439px;
+}
+
+.activities-cards .card-title {
+    padding: 20px 19px 20px 19px;
+    margin: 0;
+}
+
+.activities-cards img {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    aspect-ratio: 16/9;
+    height: 100%;
+    width: 100%;
+}
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
