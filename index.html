@@ -31,24 +31,27 @@
                 <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
                 <p>En plein centre-ville ou en pleine nature</p>
                 <form action="" method="get">
-                    <div class="icon-container">
+                    <div class="icon-container location-icon">
                         <i class="fa-solid fa-location-dot"></i>
                     </div>
                     <input type="text" name="place" id="search-place" value="Marseille, France">
                     <input type="submit" value="Rechercher">
+                    <button type="submit" class="search-icon">
+                        <div class="icon-container"><i class="fa-solid fa-magnifying-glass"></i></div>
+                    </button>
                 </form>
                 <div class="filters">
                     <h2>Filtres</h2>
-                    <button>
+                    <button class="button-filter">
                         <i class="fa-solid fa-money-bill-wave" aria-hidden="true"></i> <strong>Économique</strong>
                     </button>
-                    <button>
+                    <button class="button-filter">
                         <i class="fa-solid fa-person" aria-hidden="true"></i> <strong>Familial</strong>
                     </button>
-                    <button>
+                    <button class="button-filter">
                         <i class="fa-solid fa-heart" aria-hidden="true"></i> <strong>Romantique</strong>
                     </button>
-                    <button>
+                    <button class="button-filter">
                         <i class="fa-solid fa-fire" aria-hidden="true"></i> <strong>Nos pépites</strong>
                     </button>
                 </div>
@@ -174,7 +177,7 @@
                             </a>
                         </div>
 
-                        <p><a href="#"><strong>Afficher plus</strong></a></p>
+                        <p class="hebergements-more"><a href="#"><strong>Afficher plus</strong></a></p>
                     </div>
                 </section>
                 
