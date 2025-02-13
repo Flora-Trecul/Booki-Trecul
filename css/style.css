@@ -23,6 +23,7 @@ body {
 .main-container {
     width: 100%;
     max-width: 1440px;
+    min-width: 320px;
     padding: 0 50px;
     box-sizing: border-box;
 }
@@ -298,6 +299,8 @@ input[type="submit"] {
 }
 #hebergements .card-content {
     padding: 0 10px;
+    max-height: 70px;
+    overflow: scroll;
 }
 
 #hebergements .card-subtitle {
@@ -403,6 +406,7 @@ input[type="submit"] {
     border-top-right-radius: 20px;
     aspect-ratio: 16/9;
     height: 100%;
+    min-height: 0;
     width: 100%;
 }
 
@@ -461,7 +465,6 @@ input[type="submit"] {
         width: calc(33% - 10px);
     }
 
-
     /***** Activities *****/
 
     .activities-cards .card {
@@ -470,6 +473,7 @@ input[type="submit"] {
 
     .activities-cards .card-title {
         height: 70px;
+        overflow: scroll;
     }
 
 }
