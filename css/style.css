@@ -162,7 +162,7 @@ form {
 .location-icon {
     background-color: var(--main-bg-color);
     border-radius: 15px 0 0 15px;
-    width: 50px;
+    flex: 0 0 50px;
 }
 
 .fa-location-dot {
@@ -535,6 +535,10 @@ input[type="submit"] {
 
     /***** Intro *****/
 
+    form {
+        width: auto;
+    }
+
     input[type="submit"] {
         display: none;
     }
@@ -544,7 +548,10 @@ input[type="submit"] {
     }
 
     #search-place {
-        width: 226px;
+        min-width: 0;
+        flex: 1 1 226px;
+        text-align: start;
+        padding-left: 25px;
     }
 
     #info-bar .icon-container {
