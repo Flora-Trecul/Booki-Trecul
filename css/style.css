@@ -136,6 +136,10 @@ h1 {
     font-size: 22px;
 }
 
+#intro {
+    padding: 0 20px;
+}
+
 #intro p {
     margin: 0;
 }
@@ -199,6 +203,7 @@ input[type="submit"] {
 
 .filters, .bar-filters {
     display: flex;
+    flex-wrap: wrap;
     gap: 15px;
 }
 
@@ -485,11 +490,6 @@ input[type="submit"] {
         padding: 0;
     }
 
-    main section {
-        margin-left: 20px;
-        margin-right: 20px;
-    }
-
     /***** Header & Footer *****/
 
     nav {
@@ -557,15 +557,13 @@ input[type="submit"] {
     }
     
     .bar-filters {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
         gap: 10px;
     }
 
     .filters button {
         margin-top: 10px;
         justify-content: start;
+        width: 162.5px;
     }
 
     .button-filter strong {
@@ -629,7 +627,7 @@ input[type="submit"] {
     /***** Activities *****/
 
     #activities {
-        padding: 30px 10px;
+        padding: 30px;
     }
 
     .activities-cards {
