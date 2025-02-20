@@ -25,7 +25,7 @@ body {
     max-width: 1440px;
     min-width: 320px;
     padding: 0 50px;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Pour éviter que des éléments enfants débordent s'ils ont des bordures ou des marges par exemple */
 }
 
 h2 {
@@ -34,7 +34,7 @@ h2 {
 }
 
 a {
-    color: inherit;
+    color: inherit; /* Pour que les liens aient la même couleur que leur parent au lieu de leur attribuer une couleur fixe qu'il faudrait changer manuellement selon leur position */
     text-decoration: none;
 }
 
@@ -48,11 +48,11 @@ a {
     background-color: white;
     border-radius: 20px;
     padding: 5px;
-    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1)); /* box-shadow crée une ombre rectangulaire alors que filter: drop-shadow s'adapte aux contours de la forme */
 }
 
 .card img {
-    object-fit: cover;
+    object-fit: cover; /* Pour que l'image occupe tout l'espace en largeur sans être déformée */
 }
 
 .card-subtitle, .euro {
@@ -99,7 +99,7 @@ nav {
 .menu li:hover {
     border-top: 2px solid var(--main-color);
     color: var(--main-color);
-    padding-top: 14px;
+    padding-top: 14px; /* Réduction du padding pour éviter un décalage du texte de 2px vers le bas, étant donné que la bordure qui apparaît au survol fait 2px */
 }
 
 footer {
@@ -113,6 +113,7 @@ footer {
     margin: 0;
 }
 
+/* Pour enlever la marge supérieure, le padding et les puces attribués par défaut à une liste */
 .footer-list {
     list-style: none;
     margin: 0;
@@ -150,9 +151,10 @@ form {
     border: 1px solid var(--main-bg-color);
     border-radius: 15px;
     height: 49px;
-    width: fit-content;
+    width: fit-content; /* Pour éviter que la bordure s'étende au-delà du contenu du formulaire */
 }
 
+/* Pour centrer horizontalement et verticalement les icônes */
 .icon-container {
     display: flex;
     align-items: center;
@@ -162,7 +164,7 @@ form {
 .location-icon {
     background-color: var(--main-bg-color);
     border-radius: 15px 0 0 15px;
-    flex: 0 0 50px;
+    flex: 0 0 50px; /* Pour que l'élement conserve toujours la même taille */
 }
 
 .fa-location-dot {
@@ -193,14 +195,15 @@ input[type="submit"] {
     padding: 15px 16px;
     border-radius: 15px;
     border: 1px solid var(--main-color);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    display: none;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    display: none; /* Pour cacher cet élément sur l'affichage desktop */
 }
 
 .fa-magnifying-glass {
     color: white;
 }
 
+/* Comportement par défaut en cas de zoom : la barre de filtres passe en-dessous du titre, si le zoom fait déborder un ou plusieurs filtres, ils passent automatiquement à la ligne */
 .filters, .bar-filters {
     display: flex;
     flex-wrap: wrap;
@@ -213,7 +216,7 @@ input[type="submit"] {
     border-radius: 25px;
     padding: 4px 19px;
     height: 50px;
-    display: flex;
+    display: flex; /* Pour centrer horizontalement et verticalement le contenu des boutons filtres */
     justify-content: center;
     align-items: center;
     gap: 10px;
@@ -232,14 +235,15 @@ input[type="submit"] {
     font-size: 22px;
 }
 
-#info-bar {
+.info-bar {
     display: flex;
     gap: 10px;
     align-items: center;
     margin-top: 35px;
 }
 
-#info-bar .icon-container {
+/* Icône d'info entourée par un cercle */
+.info-bar .icon-container {
     width: 24px;
     height: 24px;
     border: 1px solid #D9D9D9;
@@ -269,16 +273,20 @@ input[type="submit"] {
     box-sizing: border-box;
 }
 
+/* Pour réduire l'espace par défaut entre les étoiles de notation, afin qu'il soit similaire à la maquette */
 .card-rating {
     letter-spacing: -2px;
 }
 
 /****** Hebergements ***********/
 
+/* Pour que la section hébergement prenne deux tiers de l'espace disponible en tenant compte du gap */
 #hebergements {
     width: calc(66.5% - 20px);
 }
 
+/* Grid pour une répartition des cartes plus esthétiques dans cette section qui en comportera beaucoup
+Anticipation d'éventuels besoins futurs pour mettre en relief certaines cartes qui prendraient davantage de place que les autres */
 .hebergements-cards {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -293,7 +301,7 @@ input[type="submit"] {
 .hebergements-cards img {
     height: 114px;
     width: 100%;
-    aspect-ratio: 16/9;
+    aspect-ratio: 16/9; /* Pour que les images en portrait se comportent de la même façon que celles en paysage et couvrent bien l'intégralité de leur conteneur */
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
     margin-bottom: 4px;
@@ -302,10 +310,11 @@ input[type="submit"] {
 .hebergements-cards .fa-star {
     font-size: 13.5px;
 }
+
 #hebergements .card-content {
     padding: 0 10px;
     max-height: 70px;
-    overflow: scroll;
+    overflow: auto; /* Pour régler un problème de débordement du contenu en cas de nom d'hébergement sur deux lignes */
 }
 
 #hebergements .card-subtitle {
@@ -324,6 +333,8 @@ input[type="submit"] {
 }
 
 /****** Populaires ***********/
+
+/* Pour que la section populaires prenne un tiers de l'espace disponible en tenant compte du gap */
 #populaires {
     width: calc(33.5% - 20px);
 }
@@ -403,16 +414,15 @@ input[type="submit"] {
     height: 59px;
     margin: 0;
     padding: 0 19px;
-    box-sizing: content-box;
 }
 
 .activities-cards img {
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     aspect-ratio: 16/9;
-    height: 100%;
-    min-height: 0;
-    width: 100%;
+    height: 100%; /* Pour que l'image couvre l'intégralité de la hauteur du conteneur */
+    width: 100%; /* Pour que l'image s'adapte au conteneur en largeur, au lieu de forcer le conteneur à s'étirer */
+    min-height: 0; /* Pour régler un problème d'affichage sur Chrome, où l'image débordait sur la partie titre */
 }
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
@@ -441,6 +451,7 @@ input[type="submit"] {
 
     /***** Hebergements & populaires *****/
 
+    /* Pour que la section populaires passe en-dessous des hébergements */
     .hebergements-and-populaires {
         flex-direction: column;
         gap: 0;
@@ -455,6 +466,7 @@ input[type="submit"] {
         margin-top: 50px;
     }
 
+    /* Pour afficher les cartes en ligne et non plus en colonne */
     .populaires-cards {
         display: flex;
         flex-direction: row;
@@ -466,6 +478,7 @@ input[type="submit"] {
         margin-top: 20px;
     }
 
+    /* Pour que les cartes prennent chacune un tiers de l'espace disponible en tenant compte du gap */
     .populaires-cards a {
         width: calc(33% - 10px);
     }
@@ -478,7 +491,7 @@ input[type="submit"] {
 
     .activities-cards .card-title {
         height: 70px;
-        overflow: scroll;
+        font-size: 15px; /* Pour éviter un problème de débordement du titre sur les tablettes de petite taille */
     }
 
 }
@@ -516,6 +529,7 @@ input[type="submit"] {
         width: 50%;
     }
 
+    /* Pour que la barre au survol apparaisse en-dessous et non plus au-dessus */
     .menu li:hover {
         border-top: none;
         border-bottom-color: var(--main-color);
@@ -539,24 +553,27 @@ input[type="submit"] {
         width: auto;
     }
 
+    /* Pour cacher le grand bouton submit en version mobile */
     input[type="submit"] {
         display: none;
     }
 
+    /* Pour afficher le petit bouton de recherche en version mobile */
     .search-icon {
         display: initial;
     }
 
     #search-place {
-        min-width: 0;
-        flex: 1 1 226px;
+        min-width: 0; /* Pour obliger l'élément saisie de texte à se rétrécir quelle que soit la taille d'écran */
+        flex: 1 1 226px; /* Pour lui attribuer une taille de base mais l'obliger à se rétrécir en fonction de la taille d'écran sans que les autres éléments soient affectés*/
         text-align: start;
         padding-left: 25px;
     }
 
-    #info-bar .icon-container {
-        flex-shrink: 0;
-        margin-top: -1px;
+    
+    .info-bar .icon-container {
+        flex-shrink: 0; /* Pour que le cercle avec l'icône d'info ne rétrécisse pas quand la taille d'écran se réduit */
+        margin-top: -1px; /* Pour résoudre un décalage d'alignement vertical sur mobile */
     }
 
     .filters {
@@ -570,7 +587,7 @@ input[type="submit"] {
     .filters button {
         margin-top: 10px;
         justify-content: start;
-        width: 162.5px;
+        width: 162.5px; /* Pour que tous les filtres aient la même largeur au lieu de s'adapter au contenu, plus esthétique lorsque certains vont automatiquement à la ligne */
     }
 
     .button-filter strong {
@@ -587,7 +604,7 @@ input[type="submit"] {
     }
 
     #hebergements {
-        order: 2;
+        order: 2; /* Pour que la section hébergement apparaisse après celle populaires */
         background-color: white;
         padding: 20px;
         margin: 0;
@@ -597,6 +614,7 @@ input[type="submit"] {
         margin-bottom: 15px;
     }
 
+    /* Transformaiton du grid en un flex sur une seule colonne, uniquement sur mobile */
     .hebergements-cards {
         display: flex;
         flex-direction: column;
@@ -613,11 +631,12 @@ input[type="submit"] {
     }
 
     #populaires {
-        order: 1;
+        order: 1; /* Pour que la section populaires apparaisse avant celle hébergements sur mobile */
         margin: 0;
         padding: 30px 20px;
     }
 
+    /* Pour afficher les cartes en colonnes et non plus en lignes */
     .populaires-cards {
         flex-direction: column;
         gap: 0;
@@ -637,6 +656,7 @@ input[type="submit"] {
         padding: 30px;
     }
 
+    /* Pour afficher les cartes en colonnes et non plus en lignes */
     .activities-cards {
         flex-direction: column;
         gap: 15px;
@@ -648,6 +668,6 @@ input[type="submit"] {
 
     .activities-cards .card-title {
         height: 59px;
-        flex-shrink: 0;
+        flex-shrink: 0; /* Pour obliger la partie titre de la carte à garder constamment la même taille*/
     }
 }
