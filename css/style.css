@@ -222,7 +222,7 @@ input[type="submit"] {
     gap: 10px;
 }
 
-.button-filter strong {
+.button-filter {
     font-size: 17px;
     font-weight: 700;
 }
@@ -445,7 +445,7 @@ Anticipation d'éventuels besoins futurs pour mettre en relief certaines cartes 
         margin: 0;
     }
 
-    .button-filter strong {
+    .button-filter {
         font-size: 16px;
     }
 
@@ -590,7 +590,7 @@ Anticipation d'éventuels besoins futurs pour mettre en relief certaines cartes 
         width: 162.5px; /* Pour que tous les filtres aient la même largeur au lieu de s'adapter au contenu, plus esthétique lorsque certains vont automatiquement à la ligne */
     }
 
-    .button-filter strong {
+    .button-filter {
         font-size: 14px;
     }
 
