@@ -551,6 +551,7 @@ Anticipation d'éventuels besoins futurs pour mettre en relief certaines cartes 
 
     form {
         width: auto;
+        max-width: 377px;
     }
 
     /* Pour cacher le grand bouton submit en version mobile */
@@ -565,7 +566,7 @@ Anticipation d'éventuels besoins futurs pour mettre en relief certaines cartes 
 
     #search-place {
         min-width: 0; /* Pour obliger l'élément saisie de texte à se rétrécir quelle que soit la taille d'écran */
-        flex: 1 1 226px; /* Pour lui attribuer une taille de base mais l'obliger à se rétrécir en fonction de la taille d'écran sans que les autres éléments soient affectés*/
+        flex-grow: 1; /* Pour l'obliger à rétrécir en fonction de la taille d'écran sans que les autres éléments soient affectés */
         text-align: start;
         padding-left: 25px;
     }
@@ -668,6 +669,6 @@ Anticipation d'éventuels besoins futurs pour mettre en relief certaines cartes 
 
     .activities-cards .card-title {
         height: 59px;
-        flex-shrink: 0; /* Pour obliger la partie titre de la carte à garder constamment la même taille*/
+        flex-shrink: 0; /* Pour obliger la partie titre de la carte à garder constamment la même taille */
     }
 }
