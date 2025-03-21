@@ -263,13 +263,13 @@ input[type="submit"] {
     display: flex;
     justify-content: space-between;
     margin: 35px 0;
-    gap: 40px;
+    gap: 30px;
 }
 
 .hebergements-and-populaires section {
     background-color: var(--main-bg-color);
     border-radius: 15px;
-    padding: 30px;
+    padding: 30px 20px;
     box-sizing: border-box;
 }
 
@@ -282,7 +282,7 @@ input[type="submit"] {
 
 /* Pour que la section hébergement prenne deux tiers de l'espace disponible en tenant compte du gap */
 #hebergements {
-    width: calc(66.5% - 20px);
+    width: calc(66.5% - 15px);
 }
 
 /* Grid pour une répartition des cartes plus esthétiques dans cette section qui en comportera beaucoup
@@ -291,7 +291,8 @@ Anticipation d'éventuels besoins futurs pour mettre en relief certaines cartes 
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: 30px;
+    column-gap: 10px;
+    row-gap: 20px;
 }
 
 .hebergements-cards .card {
@@ -312,9 +313,8 @@ Anticipation d'éventuels besoins futurs pour mettre en relief certaines cartes 
 }
 
 #hebergements .card-content {
-    padding: 0 10px;
+    padding: 0 5px;
     max-height: 70px;
-    overflow: auto; /* Pour régler un problème de débordement du contenu en cas de nom d'hébergement sur deux lignes */
 }
 
 #hebergements .card-subtitle {
@@ -325,6 +325,10 @@ Anticipation d'éventuels besoins futurs pour mettre en relief certaines cartes 
     margin: 0;
 }
 
+#hebergements .card-title {
+    font-size: 15px;
+    letter-spacing: -0.2px;
+}
 
 .hebergements-more {
     margin: 30px 0 0 0;
@@ -336,13 +340,14 @@ Anticipation d'éventuels besoins futurs pour mettre en relief certaines cartes 
 
 /* Pour que la section populaires prenne un tiers de l'espace disponible en tenant compte du gap */
 #populaires {
-    width: calc(33.5% - 20px);
+    width: calc(33.5% - 15px);
 }
 
 .populaires-title {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 33px;
 }
 
 .populaires-title .section-title {
@@ -353,9 +358,14 @@ Anticipation d'éventuels besoins futurs pour mettre en relief certaines cartes 
     font-size: 18px;
 }
 
+.populaires-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
 .populaires-cards .card {
     display: flex;
-    margin-top: 33px;
 }
 
 .populaires-cards img {
@@ -377,6 +387,7 @@ Anticipation d'éventuels besoins futurs pour mettre en relief certaines cartes 
 .populaires-cards .card-title {
     margin-top: 10px;
     margin-bottom: 4px;
+    font-size: 15px;
 }
 
 .populaires-cards .card-subtitle {
